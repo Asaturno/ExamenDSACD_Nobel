@@ -35,9 +35,8 @@ if st.button("Predecir"):
         st.warning("Introduce un texto.")
     else:
 
-        texto_vect = vectorizer.transform([texto])
-
-        prediction = model.predict(texto_vect)[0]
+        texto_vect = vect.transform([texto])
+        prediction = nb.predict(texto_vect)[0]
 
         st.subheader("Resultado")
 
