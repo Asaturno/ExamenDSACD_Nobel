@@ -23,10 +23,7 @@ y = nobel["Category"]
 vect = TfidfVectorizer()
 X_dtm = vect.fit_transform(X)
 
-nb = LogisticRegression(
-    max_iter=1000,
-    multi_class='multinomial'
-)
+nb = LogisticRegression(max_iter=1000)
 nb.fit(X_dtm, y)
 
 if st.button("Predecir"):
