@@ -23,7 +23,7 @@ y = nobel["Category"]
 vect = TfidfVectorizer()
 X_dtm = vect.fit_transform(X)
 
-nb = model = LogisticRegression(
+nb = LogisticRegression(
     max_iter=1000,
     multi_class='multinomial'
 )
